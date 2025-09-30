@@ -27,7 +27,7 @@ uploads.addEventListener('submit',
         priceTag.textContent = 'KES' + (copies * 5);
     });
 
-    function pay (method) {
+    async function pay(method) {
         const file = fileInput.files[0];
         const copies = document.getElementById('copies').value;
         const color = document.getElementById('color').value;
@@ -48,7 +48,7 @@ uploads.addEventListener('submit',
             Headers : {'content-type' : 'application/json'},
             body : JSON.stringfy(transaction)
         });
-        document.getElementById('paymentStatus')innerText = 
+        document.getElementById('paymentStatus').innerText = 
         `payment via ${method} successful. Transaction saved.`
         }
 })
