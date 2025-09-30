@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printgo Kiosk</title>
+    <llink rel="stylesheet" href="./css"></llink>
+</head>
+<body>
+    <header>
+        <h1>PrintGo Self Printing Kiosk</h1>
+    </header>
+    <main>
+        <!-- file uplaod -->
+        <section id="upload-section">
+            <h2>Upload Your File</h2>
+            <form id="uploadForm" entype="multipart/form-data">
+                <input type="file" id="fileInput" name="file" accept=".pdf, .dox. .xlsx, .jpg, .png, .gif" required>
+                <button type="submit">Upload & Preview</button>
+            </form>
+            <div id="Preview"></div>
+        </section>
+
+        <!-- print options -->
+        <section>
+            <h2>Print Options</h2>
+            <label> Color:
+                <select id="Color">
+                    <option value="bw">black & White</option>
+                    <option value="Color"> Color</option>
+                </select>
+            </label>
+            <label>Copies:
+                <input type="number" id="copies" value="1" min="1">
+            </label>
+        </section>
+
+        <!-- payments -->
+        <section>
+            <h2>Go Services</h2>
+            <ul>
+                <li>Wifi Hotspot</li>
+                <li>Airtime Reload</li>
+                <li>Advertisements</li>
+            </ul>
+        </section>
+        
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
