@@ -36,7 +36,18 @@
         </section>
 
         <!-- payments -->
-        <section>
+         <section id="payments">
+            <h2>
+                payment
+            </h2>
+            <button onclick="pay('cash')">Pay With Cash</button>
+            <button onclick="pay('mpesa')">Pay  With Mobile Money</button>
+            <button onclick="pay('card')">Pay With Card</button>
+            <p id="paymentStatus"></p>
+         </section>
+
+        <!-- Extras -->
+        <section id="services">
             <h2>Go Services</h2>
             <ul>
                 <li>Wifi Hotspot</li>
@@ -44,7 +55,7 @@
                 <li>Advertisements</li>
             </ul>
         </section>
-        
+
     </main>
 
     <script src="./app.js"></script>
