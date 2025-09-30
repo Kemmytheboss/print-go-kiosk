@@ -25,7 +25,7 @@ uploads.addEventListener('submit',
         let copies = copiesInput.value;
         priceTag.textContent = 'KES' + (copies * 5);
     });
-(
+
     function pay (method) {
         payment.innerText = `Processing ${method} payment...(simulation)`;
     }
