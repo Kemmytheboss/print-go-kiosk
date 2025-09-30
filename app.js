@@ -3,6 +3,7 @@ const Preview = document.querySelector("#preview")
 const priceTag = document.querySelector("#price");
 const copiesInput = document.querySelector("#copies");
 const uploads = document.querySelector("#uploadForm");
+const payment = document.querySelector("paymentStatus");
 
 uploads.addEventListener('submit', 
     async (e) =>{
@@ -24,8 +25,8 @@ uploads.addEventListener('submit',
         let copies = copiesInput.value;
         priceTag.textContent = 'KES' + (copies * 5);
     });
-
+(
     function pay (method) {
-        document.querySelector(#paymentStatus)
+        payment.innerText = `Processing ${method} payment...(simulation)`;
     }
 })
