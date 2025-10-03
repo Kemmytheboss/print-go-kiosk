@@ -1,15 +1,30 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: #efeeea;
   color: #222;
   text-align: center;
   padding: 20px;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background: #003366;
-  color: white;
+  color: #ffffff;
   padding: 15px;
+}
+
+header nav a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background-color: #003366;
+  color: #ffffff;
 }
 
 section {
@@ -20,9 +35,13 @@ section {
   border-radius: 8px;
 }
 
-button {
+.btn {
+  display: inline-block;
   padding: 10px 20px;
-  margin: 10px;
-  font-size: 18px;
-  cursor: pointer;
+  margin-top: 150px;
+  background-color: #003366;
+  color: #ffffff;
+  text-decoration: nonw;
+  border-radius: 5px;
 }
+
