@@ -50,3 +50,18 @@ async function deleteService(id) {
 }
 
 document.addEventListener("DOMContentLoaded", loadCatalog);
+
+document.getElementById("addForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const newService = {
+    name: document.getElementById("name").value,
+    image: document.getElementById("image").value,
+    description: document.getElementById("description").value,
+    price: document.getElementById("price").value
+  };
+
+  await addService(newService);
+  e.target.reset();
+});
+
