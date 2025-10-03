@@ -1,3 +1,25 @@
 {
-    "transactions": []
+  "products": [
+    {
+      "id": 1,
+      "name": "Document Printing",
+      "desc": "High quality B/W or Color printing",
+      "img": "images/print.jpg",
+      "price": 5
+    },
+    {
+      "id": 2,
+      "name": "Binding Services",
+      "desc": "Spiral and hardcover binding options",
+      "img": "images/binding.jpg",
+      "price": 20
+    },
+    {
+      "id": 3,
+      "name": "Photo Printing",
+      "desc": "Glossy and matte photo prints",
+      "img": "images/photo.jpg",
+      "price": 15
+    }
+  ]
 }
