@@ -44,3 +44,40 @@ async function loadProduct() {
     `;
   }
 }
+
+
+// Add to cart
+function addToCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart!");
+}
+
+// Load cart
+async function loadCart() {
+  const res = await fetch("db.json");
+  const data = await res.json();
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartDiv = document.getElementById("cart-items");
+
+  if (cartDiv) {
+    if (cart.length === 0) {
+      cartDiv.innerHTML = "<p>Your cart is empty.</p>";
+      return;
+    }
+    let items = cart.map(id => data.services.find(p => p.id == id));
+    cartDiv.innerHTML = items.map(item => `
+      <div class="card">
+        <h3>${item.name}</h3>
+        <p>${item.price}</p>
+      </div>
+    `).join("");
+  }
+}
+
+// Run functions depending on page
+if (document.getElementById("catalog")) loadCatalog();
+if (document.getElementById("product-details")) loadProduct();
+if (document.getElementById("cart-items")) loadCart();
+📂 File 8: db.json
