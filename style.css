@@ -27,13 +27,13 @@ header nav a {
   color: #ffffff;
 }
 
-section {
+/* section {
   margin: 20px auto;
   padding: 15px;
   border: 1px solid #ccc;
   width: 80%;
   border-radius: 8px;
-}
+} */
 
 .btn {
   display: inline-block;
@@ -45,3 +45,11 @@ section {
   border-radius: 5px;
 }
 
+
+.card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px #7f4fc7;
+  text-align: center;
+}
