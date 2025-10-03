@@ -19,3 +19,28 @@ async function loadCatalog () {
     }
 
 }
+
+
+// Load single product
+async function loadProduct() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  if (!id) return;
+
+  const res = await fetch("db.json");
+  const data = await res.json();
+  const product = data.services.find(p => p.id == id);
+  const details = document.getElementById("product-details");
+
+  if (product && details) {
+    details.innerHTML = `
+      <div class="card">
+        <img src="${product.image}" alt="${product.name}" width="200">
+        <h2>${product.name}</h2>
+        <p>${product.description}</p>
+        <p><strong>${product.price}</strong></p>
+        <button onclick="addToCart(${product.id})" class="btn">Add to Cart</button>
+      </div>
+    `;
+  }
+}
